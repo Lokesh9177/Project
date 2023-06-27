@@ -3,4 +3,6 @@ steps:
      command: buildkite-agent pipeline upload
   - label: "Tests"
     command: "npm test"
+agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
     
